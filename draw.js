@@ -209,6 +209,7 @@ function writing(x0,y0){
 }
 textBox.onclick=function(){
     type=this.id;
+    canvas.style.cursor='text';
     text_style.style.display='block';
     line_status.style.display='none';
     reback(this);
@@ -293,7 +294,7 @@ wider.onclick=function(){
 line.onclick=function(){
     console.log(colors);
     type=this.id;
-    canvas.style.cursor="url(./images/pen.ico),auto";
+    canvas.style.cursor='crosshair';
     reback(this);
     penWidth(wider);
     line_status.style.display='block';
@@ -304,7 +305,7 @@ line.onclick=function(){
 }
 strLine.onclick=function(){
     type=this.id;
-    canvas.style.cursor="url(./images/pen2.ico),auto";
+    canvas.style.cursor='crosshair';
     reback(this);
     penWidth(wider);
     line_status.style.display='block';
@@ -316,8 +317,8 @@ strLine.onclick=function(){
 function drawLine(){
     canvas.onmousemove = function(event) {
         context.putImageData(restorePoint, 0, 0);
-        var x1 = event.clientX - canvas.offsetLeft+12;
-        var y1 = event.clientY - canvas.offsetTop+20;
+        var x1 = event.clientX - canvas.offsetLeft;
+        var y1 = event.clientY - canvas.offsetTop;
 
         context.strokeStyle=colors[colors.length-1];
         context.lineTo(x1,y1);
@@ -436,7 +437,7 @@ function drawMyCanvas(e) {
     if(type=="line"){
         context.beginPath();
         penColor();
-        context.moveTo(x0+12,y0+20);
+        context.moveTo(x0,y0);
         drawLine();
     }else if(type=="strLine"){
         context.beginPath();
