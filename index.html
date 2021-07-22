@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel=stylesheet href="style.css"/>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="header">
+        <ul class="nav">
+            <li>
+                文件
+                <ul class="nav_in">
+                    <li id="newcanvas">新建</li>
+                    <li id="open">打开</li>
+                    <li id="save">保存</li>
+                </ul>
+            </li>
+            <li>编辑
+                <ul class="nav_in">
+                    <li id="rebacklast">撤销</li>
+                    <li id="clear">清空</li>
+                </ul>
+            </li>
+            <li>视图
+                <ul class="nav_in">
+                    <li id="tools_board">工具栏</li>
+                    <li id="color_board">色板</li>
+                    <li id="status_board">状态栏</li>
+                </ul>
+            </li>
+            <li>帮助
+                <ul class="nav_in">
+                    <li id="aboutdraw">关于画板</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="left">
+        <div id="drawtools">
+            <ul class="tools-left">
+                <li>1</li>
+                <li id="erase">2</li>
+                <li>3</li>
+                <li id="line">4</li>
+                <li>5</li>
+                <li id="strLine">6</li>
+                <li id="retangle">7</li>
+                <li id="circle">8</li>
+            </ul>
+            <ul class="tools-right">
+                <li>1</li>
+                <li id="fillColor">2</li>
+                <li>3</li> 
+                <li>4</li>
+                <li id="textBox">5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+            </ul>
+            
+            <!-- <input id="inp" type="text"/> -->
+        </div>
+        <div id="status" class="drawborad_status" >
+            <div class="line_status">
+                <div id="thin"><span id="line1"></span></div>
+                <div id="thiner"><span id="line2"></span></div>
+                <div id="mid"><span id="line3"></span></div>
+                <div id="wid"><span id="line4"></span></div>
+                <div id="wider"><span id="line5"></span></div>
+            </div>
+        </div>
+      
+        <div id="right">
+            <div id="con">
+                <canvas id="canvas" height="500" width="750"></canvas>
+                <textarea name="textBox"cols="20" rows="1" class="text-style"></textarea>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="footer">
+        <div class="footer-top">
+            <div id="drawBoard_left">
+                <div id="drawnow_one"></div>
+                <div id="drawnow_two"></div>
+            </div>
+            <div id="drawBoard_right">
+                <ul id="drawBoard_top">
+                    <li class="mycolor" style="background:black"></li>
+                    <li class="mycolor" style="background:red"></li>
+                    <li class="mycolor" style="background:orange"></li>
+                    <li class="mycolor" style="background:yellow"></li>
+                    <li class="mycolor" style="background:green"></li>
+                    <li class="mycolor" style="background:lime"></li>
+                    <li class="mycolor" style="background:blue"></li>
+                    <li class="mycolor" style="background:purple"></li>
+                    <li class="mycolor" style="background:pink"></li>
+                    <li class="mycolor" style="background:grey"></li>
+                </ul>
+                <ul id="drawBoard_bottom">
+                    <li class="mycolor" style="background:white"></li>
+                    <li class="mycolor" style="background:crimson"></li>
+                    <li class="mycolor" style="background:salmon"></li>
+                    <li class="mycolor" style="background:goldenrod"></li>
+                    <li class="mycolor" style="background:yellowgreen"></li>
+                    <li class="mycolor" style="background:lightgreen"></li>
+                    <li class="mycolor" style="background:lightskyblue"></li>
+                    <li class="mycolor" style="background:blueviolet"></li>
+                    <li class="mycolor" style="background:plum"></li>
+                    <li class="mycolor" style="background:lightslategrey"></li>
+                </ul>
+            </div>
+           
+        </div>
+        <div class="footer-bottom">For Help, click Help Topics on the Help Menu.</div>
+    </div>
+</body>
+<script src="draw.js"></script>
+</html>

@@ -1,0 +1,306 @@
+ul{
+    list-style:none;
+}
+/* 导航栏 */
+#header{
+    line-height:50px;
+    height:50px;
+    background: #ADADAD; 
+}
+.nav{
+    margin:0;
+    display:flex;
+    align-self: center;
+}
+.nav li{
+    position:relative;
+    width:50px;
+    height:20px;
+}
+.nav_in{
+    position:absolute;
+    display:none;
+}
+.nav_in li{
+    top:-10px;
+    left:-10px;
+    width:50px;
+    height:35px;
+    font-size: 12px;
+}
+.nav li:hover{
+    text-decoration: underline;
+}
+.nav li:hover .nav_in{
+    display:block;
+    background:lightgrey;
+    margin-top:-15px;
+    margin-left:-35px;
+}
+.nav_in li:hover{
+    color: red; 
+}
+
+/* 工具栏 */
+#inp{
+    border:white;
+    width:50px;
+    height:10px;
+}
+#drawtools{
+    display:flex;
+    width:120px;
+    background:#ADADAD;
+}
+#left{
+    display:flex;
+    height:550px;
+    /* position: relative; 影响二级菜单*/
+}
+#left li{
+    border:2px solid #000;
+    width:30px;
+    height:30px;
+}
+#left div:nth-child(1) ul{
+    padding-left:0;
+}
+.tools-left{
+    margin-left:25px;
+}
+.tools-left li:nth-child(1){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) #ccc;
+    background-size:60px;
+    /* background-color: ghostwhite; */
+}
+.tools-left li:nth-child(2){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) 2px -30px#ccc;
+    background-size:60px;
+}
+.tools-left li:nth-child(3){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) 0 -60px#ccc;
+    background-size:60px;
+}
+.tools-left li:nth-child(4){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) -2px -93px#ccc;
+    background-size:60px;
+}
+.tools-left li:nth-child(5){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) 0 -125px#ccc;
+    background-size:60px;
+}
+.tools-left li:nth-child(6){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) 0 -155px#ccc;
+    background-size:60px;
+}
+.tools-left li:nth-child(7){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) 2px -185px#ccc;
+    background-size:60px;
+}
+.tools-left li:nth-child(8){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) 2px -215px#ccc;
+    background-size:60px;
+}
+
+.tools-right li:nth-child(1){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) 30px 2px #ccc;
+    background-size:60px;
+}
+.tools-right li:nth-child(2){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) 30px -30px#ccc;
+    background-size:60px;
+}
+.tools-right li:nth-child(3){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) 30px -60px#ccc;
+    background-size:60px;
+}
+.tools-right li:nth-child(4){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) 30px -93px#ccc;
+    background-size:60px;
+}
+.tools-right li:nth-child(5){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) 30px -125px#ccc;
+    background-size:60px;
+}
+.tools-right li:nth-child(6){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) 30px -155px#ccc;
+    background-size:60px;
+}
+.tools-right li:nth-child(7){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) 30px -185px#ccc;
+    background-size:60px;
+}
+.tools-right li:nth-child(8){
+    box-shadow: gray -2px -2px;
+    background:url(./images/tools.png) 30px -215px#ccc;
+    background-size:60px;
+}
+
+/* 工具状态 */
+#status{
+    position:absolute;
+    width:50px;
+    height:100px;
+    background:#F0F0F0;
+    border:2px solid gray;
+    box-shadow: #BEBEBE 2px 2px ;
+    top:350px;
+    left:40px;
+    overflow: hidden;
+}
+.line_status{
+    display:none;
+    width:50px;
+    height:100px;
+    background:#F0F0F0;
+}
+/* 直线粗细 */
+.line_status div{
+    height:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line_status span{
+    display: block;
+}
+#line1{
+    width:38px;
+    height:2px;
+    background: black;
+    
+}
+#line2{
+    width:38px;
+    height:3px;
+    background-color: black;
+}
+#line3{
+    width:38px;
+    height:4px;
+    background-color: black;
+}
+#line4{
+    width:39px;
+    height:5px;
+    background-color: black;
+}
+#line5{
+    width:41px;
+    height:6px;
+    background-color: black;
+}
+/* 画布 */
+#right{
+    width:100%;
+    border-left:3px solid black;
+    background:grey;
+    padding:5px 2px; 
+
+}
+#con{
+   /*   position: relative; 
+   定位让画笔出现误差*/
+    width:750px;
+    height:500px;
+}
+#canvas{
+    width:750px;
+    height:500px;
+    background:#fff;
+	z-index: 1;
+}
+.text-style {
+    position: absolute; 
+    left:0;
+    top:0;
+    font-size: 30px;
+    word-break: break-all;
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 2;
+    display: none;
+}
+/* 底部 */
+#footer{
+    height:80px;
+}
+.footer-top{
+    height:50px;
+    line-height:30px;
+    border-bottom:2px solid grey;
+    display:flex;
+    background: #ADADAD;
+}
+
+.footer-bottom{
+    height:30px;
+    line-height:30px;
+    background: #ADADAD;
+}
+
+#drawBoard_left{
+    width:50px;
+    height:50px;
+    margin-left:20px;
+    background:lightgray;
+    position:relative;
+    box-shadow:black 3px 2px inset;
+}
+#drawBoard_left div{
+    width:15px;
+    height:15px;
+    border:1.5px solid gray;
+   
+}
+#drawBoard_left div:nth-child(1){
+    position:absolute;
+    top:15px;
+    left:15px;
+    z-index:2;
+    background:black;
+}
+#drawBoard_left div:nth-child(2){
+    position:absolute;
+    top:25px;
+    left:25px;
+    background:white;
+}
+#drawBoard_right{
+    margin-left:20px;
+    margin-top:10px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.footer-top ul{
+    display:flex;
+    margin:0;
+    padding:0;
+}
+
+.footer-top li{
+    width:15px;
+    height:15px;
+    border:2px solid #000;
+    border-bottom:none;
+    border-right:none;
+    box-shadow:#d0d0d0 -2px -2px 1px 1px;
+}
+
